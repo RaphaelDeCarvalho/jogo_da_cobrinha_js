@@ -1,5 +1,5 @@
 body {
-    height: 95vh;
+    height: 150vh;
     width: 95vh;
     display: flex;
     justify-content: center;
@@ -7,7 +7,12 @@ body {
     flex-direction: column;
     color: rgb(8, 143, 143);
 }
-@media (min-width:800px) {    
+
+@media (min-width:650px) {
+body{
+    height: 95vh;
+    margin: auto;
+}    
 .arrows{
     display: none;
     }
@@ -18,4 +23,36 @@ body {
     border: 1px solid #7c7b7b;
     height: 200px;
     width: 200px;
+}
+.arrowVert {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+    margin: 0 70px 0px 70px;
+    height: 100%;
+}
+.upArrow {
+    height: 72px;
+}
+.wrapZone {
+    height: 53px;
+}
+.downArrow {
+    height: 75px;
+}
+.arrowHoriz {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid blue;
+    margin: -65% 0 0 0;
+    height: 50px;
+}
+.leftArrow {
+    width: 70px;
+}
+.wrapZone2 {
+    width: 60px;
+}
+.rightArrow {
+    width: 70px;
 }
