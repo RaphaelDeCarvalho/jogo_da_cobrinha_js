@@ -1,9 +1,21 @@
 body {
     height: 95vh;
-    width: 95;
+    width: 95vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     color: rgb(8, 143, 143);
+}
+@media (min-width:800px) {    
+.arrows{
+    display: none;
+    }
+}
+
+.arrows {
+    margin-top: 30px;
+    border: 1px solid #7c7b7b;
+    height: 200px;
+    width: 200px;
 }
