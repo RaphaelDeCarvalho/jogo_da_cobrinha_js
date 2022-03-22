@@ -20,16 +20,15 @@ body{
 
 .arrows {
     margin-top: 30px;
-    border: 1px solid #7c7b7b;
     height: 200px;
     width: 200px;
 }
 .arrowVert {
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
     margin: 0 70px 0px 70px;
     height: 100%;
+    background-color: lightgreen;
 }
 .upArrow {
     height: 72px;
@@ -43,9 +42,9 @@ body{
 .arrowHoriz {
     display: flex;
     flex-direction: row;
-    border: 1px solid blue;
     margin: -65% 0 0 0;
     height: 50px;
+    background-color: lightgreen;
 }
 .leftArrow {
     width: 70px;
@@ -55,4 +54,7 @@ body{
 }
 .rightArrow {
     width: 70px;
+}
+.upArrow:hover ,.downArrow:hover ,.leftArrow:hover ,.rightArrow:hover {
+    background-color: green;
 }
