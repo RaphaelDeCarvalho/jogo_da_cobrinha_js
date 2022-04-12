@@ -48,7 +48,30 @@ function update (event){
 
 }
 
-
+    const arrowLeft = document.querySelector(".leftArrow");
+    arrowLeft.addEventListener("click", eventoClickLeft);
+    function eventoClickLeft(event){
+        event.keyCode = "37";
+        direction = "left"; 
+    }
+    const arrowUp = document.querySelector(".upArrow");
+    arrowUp.addEventListener("click", eventoClickUp);
+    function eventoClickUp(event){
+        event.keyCode = "38";
+        direction = "up"; 
+    }
+    const arrowRight = document.querySelector(".rightArrow");
+    arrowRight.addEventListener("click", eventoClickRight);
+    function eventoClickRight(event){
+        event.keyCode = "39";
+        direction = "right"; 
+    }
+    const arrowDown = document.querySelector(".downArrow");
+    arrowDown.addEventListener("click", eventoClickDown);
+    function eventoClickDown(event){
+        event.keyCode = "40";
+        direction = "down"; 
+    }
 
 
 function iniciarJogo(){
