@@ -1,9 +1,6 @@
 body {
     height: 150vh;
-    width: 95vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     color: rgb(8, 143, 143);
 }
@@ -11,7 +8,10 @@ body {
 @media (min-width:650px) {
 body{
     height: 95vh;
+    width: 95vh;
     margin: auto;
+    justify-content: center;
+    align-items: center;
 }    
 .arrows{
     display: none;
