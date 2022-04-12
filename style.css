@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 body {
     background-color: darkslategrey;
-    height: 150vh;
     display: flex;
     flex-direction: column;
     color: rgb(8, 143, 143);
@@ -28,7 +27,7 @@ body{
 }
 
 .arrows {
-    margin: 30px auto;
+    margin: 4vh auto;
     height: 200px;
     width: 200px;
 }
