@@ -49,30 +49,57 @@ function update (event){
 }
 
     const arrowLeft = document.querySelector(".leftArrow");
-    arrowLeft.addEventListener("click", eventoClickLeft);
-    function eventoClickLeft(event){
-        event.keyCode = "37";
-        direction = "left"; 
-    }
     const arrowUp = document.querySelector(".upArrow");
-    arrowUp.addEventListener("click", eventoClickUp);
-    function eventoClickUp(event){
-        event.keyCode = "38";
-        direction = "up"; 
-    }
     const arrowRight = document.querySelector(".rightArrow");
-    arrowRight.addEventListener("click", eventoClickRight);
-    function eventoClickRight(event){
-        event.keyCode = "39";
-        direction = "right"; 
-    }
     const arrowDown = document.querySelector(".downArrow");
-    arrowDown.addEventListener("click", eventoClickDown);
-    function eventoClickDown(event){
-        event.keyCode = "40";
-        direction = "down"; 
-    }
 
+    arrowLeft.addEventListener("click", eventoClickLeft);
+    arrowUp.addEventListener("click", eventoClickUp);
+    arrowRight.addEventListener("click", eventoClickRight);
+    arrowDown.addEventListener("click", eventoClickDown);
+
+    let arrowVert = false;
+    let arrowHoriz = true;
+
+    
+        function eventoClickLeft(event){
+            if(arrowVert){
+            event.keyCode = "37";
+            direction = "left";
+            arrowHoriz = true;
+            arrowVert = false; 
+            }
+        }
+    
+    
+        function eventoClickUp(event){
+            if(arrowHoriz){
+            event.keyCode = "38";
+            direction = "up";
+            arrowVert = true;
+            arrowHoriz = false 
+            }
+        }
+    
+    
+        function eventoClickRight(event){
+            if(arrowVert){
+            event.keyCode = "39";
+            direction = "right";
+            arrowHoriz = true;
+            arrowVert = false; 
+            }
+        }
+    
+    
+        function eventoClickDown(event){
+            if(arrowHoriz){
+            event.keyCode = "40";
+            direction = "down";
+            arrowVert = true;
+            arrowHoriz = false; 
+            }
+        }
 
 function iniciarJogo(){
 
