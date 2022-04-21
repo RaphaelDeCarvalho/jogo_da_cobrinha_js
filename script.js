@@ -1,5 +1,6 @@
 let canvas = document.getElementById("snake");
 let context = canvas.getContext("2d");
+let score = 0;
 let box = 32;
 let snake = [];
 snake[0] = {
@@ -32,7 +33,7 @@ function criarCobrinha(){
 function drawFood(){
     context.fillStyle = "red";
     context.fillRect(food.x, food.y, box ,box);
-
+    
 }
 
 
@@ -115,7 +116,7 @@ function iniciarJogo(){
     for(i = 1; i < snake.length; i++){
         if(snake[0].x == snake[i].x && snake[0].y == snake[i].y){
             clearInterval(jogo);
-            let endGame = confirm('Game Over !\nDeseja recomeçar?');
+            let endGame = confirm(`_|| Game Over ||_\nPontuação final de:\n${score} Pontos.\n Deseja recomeçar?`);
             if (endGame == true){
                 document.location.reload(true);
             }
@@ -142,10 +143,11 @@ function iniciarJogo(){
         snake.pop();
         
     }
-    else{food.x = Math.floor(Math.random() * 15 + 1) * box;
-    food.y = Math.floor(Math.random() * 15 + 1) * box;
+    else{
+        food.x = Math.floor(Math.random() * 15 + 1) * box;
+        food.y = Math.floor(Math.random() * 15 + 1) * box;
+        score += 10;
     }
-
 
 
     let newHead = {
